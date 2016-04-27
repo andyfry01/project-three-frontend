@@ -3,6 +3,9 @@
   "version": "0.12.4",
   "description": "music round da world",
   "main": "index.js",
+  "engines": {
+    "node": "0.12.4"
+  },
   "scripts": {
     "production": "webpack -p",
     "postinstall": "npm run production"
