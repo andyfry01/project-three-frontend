@@ -1,0 +1,63 @@
+input {
+  background-color: rgba(0,0,0, .2);
+  color: rgba(168, 168, 168, 1);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, .1);
+  font-size: 30px;
+  margin: 5px 0px;
+  outline: 0px;
+  padding: 10px;
+  margin: 5px 0;
+  width: 95%;
+
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+}
+::-webkit-input-placeholder {
+   color: rgba(255,255,255,.2);
+}
+input:focus {
+  background-color: rgba(142, 38, 113,.4);
+  box-shadow: 0 0 5px rgba(168, 168, 168, .4);
+  margin: 5px 0px;
+  border: 1px solid rgba(168, 168, 168, .4);
+}
+
+button {
+  background-color: rgba(117, 1, 92, .5);
+  border-radius: 5px;
+  border: 0px;
+  outline: 0px;
+  color: rgba(168, 168, 168,.9);
+  padding: 15px;
+  margin: 5px;
+  font-size: 30px;
+}
+button:hover {
+  background-color: #8e2671;
+  cursor: cell;
+
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+}
+
+.loginBtnsCont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.landingFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginBoxPosition {
+  position: relative;
+  top: 40px;
+}
