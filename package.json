@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "production": "webpack -p",
-    "postinstall": "npm run dist"
+    "postinstall": "npm run production"
   },
   "author": "",
   "license": "ISC",
