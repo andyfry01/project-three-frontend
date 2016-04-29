@@ -36,7 +36,7 @@ const helpers = {
 
   //request to lastFM
   findCountrySongs: function(countryName){
-    return axios.get('http://ws.audioscrobbler.com/2.0/?format=json&method=geo.gettoptracks&country=' + countryName + '&api_key=' + process.env.LASTFM_API_KEY);
+    return axios.get('https://ws.audioscrobbler.com/2.0/?format=json&method=geo.gettoptracks&country=' + countryName + '&api_key=' + process.env.LASTFM_API_KEY);
   },
 
   //play song from spotify
