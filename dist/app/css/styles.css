@@ -1,0 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Mallanna);
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Mallanna', arial;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+  background: linear-gradient(-190deg, #2f052d, #0B162A);
+  background-repeat: no-repeat;
+  color: #444;
+}
+
+a {
+  text-decoration: none;
+  cursor: cell;
+}
+
+.flexStyle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.flexResults {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.btnStyle {
+  width: 100%;
+}

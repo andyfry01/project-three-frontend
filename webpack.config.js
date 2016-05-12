@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: path.join(__dirname, '/app/index.html'),
@@ -16,7 +17,12 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
-    HtmlWebpackPluginConfig
+    HtmlWebpackPluginConfig,
+    new webpack.DefinePlugin({
+      'process.env': {
+        'LASTFM_API_KEY': JSON.stringify(process.env.LASTFM_API_KEY)
+      }
+    })
   ],
   module: {
     loaders: [
