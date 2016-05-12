@@ -9,7 +9,6 @@ const LandingPage = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },
-
   getInitialState: function() {
     return {
       user: '',
@@ -23,14 +22,12 @@ const LandingPage = React.createClass({
     this.setState({
       user: e.target.value
     })
-    console.log("target.value for user is:", this.state.user);
   },
 
   handleOnChangePassword: function(e) {
     this.setState({
       password: e.target.value
     })
-    console.log("target.value for password is:", e.target.value);
   },
 
   handleFindUser: function(e){
@@ -44,8 +41,6 @@ const LandingPage = React.createClass({
       playlist: [],
       loggedIn: true
     };
-    console.log('finding user');
-    console.log('the user looks like this', user);
      ajaxHelpers.findUser(user)
   },
 
@@ -54,14 +49,12 @@ const LandingPage = React.createClass({
       user: this.state.user,
       password: this.state.password
     });
-    console.log("this.state.user is:", this.state.user);
     let user = {
       user: this.state.user,
       password: this.state.password,
       playlist: [],
       loggedIn: true
     };
-    console.log('the user looks like this', user);
      ajaxHelpers.addUser(user)
   },
 
