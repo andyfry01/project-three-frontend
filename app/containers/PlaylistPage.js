@@ -6,6 +6,13 @@ import {Link} from 'react-router';
 
 const PlaylistPage = React.createClass({
 
+  getInitialState: function(){
+    return {
+      ajaxReturn: [],
+      showPlaylist: false
+    }
+  },
+
   componentDidMount: function() {
     console.log("hi playlistPage has loaded");
 
@@ -14,27 +21,12 @@ const PlaylistPage = React.createClass({
       this.setState({
         ajaxReturn: response
       });
+      this.setState({
+        showPlaylist: true
+      })
     }.bind(this));
   },
 
-  getInitialState: function(){
-    return {
-      ajaxReturn: [],
-    }
-  },
-
-  getPlaylist: function(){
-    if (this.state.ajaxReturn){
-      return (
-        <div>
-          <PlaylistComponent
-            savedTxt={this.props.savedTxt}
-            playlist={this.state.ajaxReturn}
-          />
-        </div>
-      );
-    }
-  },
 
   render: function() {
 
@@ -58,7 +50,11 @@ const PlaylistPage = React.createClass({
         <div style={divStyle.divPos}>
           <h1 style={divStyle.h1Style}> Playlist</h1>
             <div>
-              {this.getPlaylist()}
+              { this.state.showPlaylist ? <PlaylistComponent
+                                          savedTxt={this.props.savedTxt}
+                                          playlist={this.state.ajaxReturn}
+                                          />
+                                        : null }
             </div>
         </div>
       </div>
