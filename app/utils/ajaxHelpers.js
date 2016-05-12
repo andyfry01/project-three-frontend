@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const helpers = {
+const ajaxHelpers = {
 
   //finding user by username
   findUser: function(user){
@@ -36,7 +36,7 @@ const helpers = {
 
   //request to lastFM
   findCountrySongs: function(countryName) {
-    return axios.get('https://ws.audioscrobbler.com/2.0/?format=json&method=geo.gettoptracks&country=' + countryName + '&api_key=' process.env.LASTFM_API_KEY);
+    return axios.get('https://ws.audioscrobbler.com/2.0/?format=json&method=geo.gettoptracks&country=' + countryName + '&api_key=' + process.env.LASTFM_API_KEY);
   },
 
   //play song from spotify
@@ -45,4 +45,4 @@ const helpers = {
   },
 
 }
-export default helpers;
+export default ajaxHelpers;
