@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const helpers = {
 
-  //finding user by name
+  //finding user by username
   findUser: function(user){
     return axios.post('https://vybez-backend.herokuapp.com/users/find', user);
   },
@@ -35,7 +35,7 @@ const helpers = {
   },
 
   //request to lastFM
-  findCountrySongs: function(countryName){
+  findCountrySongs: function(countryName) {
     return axios.get('https://ws.audioscrobbler.com/2.0/?format=json&method=geo.gettoptracks&country=' + countryName + '&api_key=' process.env.LASTFM_API_KEY);
   },
 
